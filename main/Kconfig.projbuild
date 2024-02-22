@@ -1,0 +1,46 @@
+menu "BottleFiller Config"
+
+    config WIFI_SSID
+        string "Wifi SSID"
+        default "EspBottleFiller"
+        help
+            Wifi SSID, case sensitive!.
+
+    config WIFI_PASS
+        string "Wifi WPA pass"
+        default "EspBottleFiller123"
+        help
+            Wifi WPA pass.
+
+    config WIFI_AP
+        bool "Use Wifi AP"
+        default y
+        help
+            Starts a wifi Access Point so the user can connect and configure wifi in the web gui.
+
+    config HOSTNAME
+        string "Hostname"
+        default "bottlefiller"
+        help
+            Hostname to use for network.
+
+    config PUMP1
+        int "PUMP1 Pin"
+        default 7
+        help
+            PUMP1 Pin
+            Must be enabled!
+
+    config PUMP2
+        int "PUMP2 Pin"
+        default 10
+        help
+            PUMP2 Pin
+            Set to 0 to disable!
+
+    config InvertOutputs
+        bool "Invert Outputs"
+        default n
+        help
+            Invert the output direction Low/High
+endmenu
